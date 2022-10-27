@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3949789653
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BattleShadow
+    uniqueID: 1417113443
+    locked: 0
+  - name: Hero
+    uniqueID: 1806222691
+    locked: 0
+  - name: Lifes
+    uniqueID: 3293031567
+    locked: 0
+  - name: Arrow_atack
+    uniqueID: 3055788403
+    locked: 0
+  - name: Enemys
+    uniqueID: 1480192409
+    locked: 0
