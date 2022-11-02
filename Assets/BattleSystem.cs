@@ -1,25 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using UnityEngine.SceneManagement;
 
-public enum BattleState {START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState
+{
+    START,
+    PLAYERTURN,
+    ENEMYTURN,
+    WON,
+    LOST
+}
 
 public class BattleSystem : MonoBehaviour
 {
     public GameObject playerPrefab;
+
     public GameObject enemyPrefab;
 
     public Transform playerBattleStation;
+
     public Transform enemyBattleStation;
 
     Unit playerUnit;
+
     Unit enemyUnit;
 
     public TextMeshProUGUI dialogueText;
 
     public BattleHUD playerHUD;
+
     public BattleHUD enemyHUD;
 
     public BattleState state;
@@ -30,29 +42,39 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.START;
         StartCoroutine(SetupBattle());
     }
-    IEnumerator SetupBattle()   
+
+    IEnumerator SetupBattle()
     {
-        GameObject playerGo =  Instantiate(playerPrefab, playerBattleStation);
+        GameObject playerGo = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGo.GetComponent<Unit>();
 
         GameObject enemyGo = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGo.GetComponent<Unit>();
 
-        dialogueText.text = "What to do you want to do" + " " + playerUnit.unitName + "?";
+        dialogueText.text =
+            "What to do you want to do" + " " + playerUnit.unitName + "?";
 
-        playerHUD.SetHUD(playerUnit);
-        enemyHUD.SetHUD(enemyUnit);
+        playerHUD.SetHUD (playerUnit);
+        enemyHUD.SetHUD (enemyUnit);
 
         yield return new WaitForSeconds(2f);
 
         state = BattleState.PLAYERTURN;
         PlayerTurn();
-            
     }
-    IEnumerator PlayerAttack()
+
+    IEnumerator PlayerAttack(string type = "normal")
     {
-        ///Damage the enemy
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        // Damage the enemy
+        bool isDead;
+        if (type == "skill")
+        {
+            isDead = enemyUnit.TakeDamage(playerUnit.skillDamage);
+        }
+        else
+        {
+            isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        }
 
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogueText.text = "The attack is successful!";
@@ -73,14 +95,13 @@ public class BattleSystem : MonoBehaviour
             StartCoroutine(EnemyTurn());
         }
 
-        
         // Change state based on what happened
     }
 
-    IEnumerator EnemyTurn()
-     /// Enemy actions logic
+    IEnumerator EnemyTurn() // Enemy actions logic
+
     {
-        dialogueText.text = enemyUnit.unitName +" " + "atacks!";
+        dialogueText.text = enemyUnit.unitName + " " + "atacks!";
         yield return new WaitForSeconds(1f);
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
@@ -98,18 +119,20 @@ public class BattleSystem : MonoBehaviour
             PlayerTurn();
         }
     }
+
     void EndBattle()
     {
         if (state == BattleState.WON)
         {
             dialogueText.text = "You won the battle!";
+            StartCoroutine(backToWorld());
         }
         else if (state == BattleState.LOST)
         {
             dialogueText.text = "You are Ass";
         }
     }
-    
+
     void PlayerTurn()
     {
         dialogueText.text = "Choose an action";
@@ -127,18 +150,30 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
     }
+
+    IEnumerator backToWorld(){
+        yield return new WaitForSeconds(2f);
+        
+        SceneManager.LoadScene("World");
+    }
+
     public void OnAttackButton()
     {
-        if (state != BattleState.PLAYERTURN)
-            return;
+        if (state != BattleState.PLAYERTURN) return;
 
         StartCoroutine(PlayerAttack());
     }
 
+    public void OnSkillButton()
+    {
+        if (state != BattleState.PLAYERTURN) return;
+
+        StartCoroutine(PlayerAttack("skill"));
+    }
+
     public void OnHealButton()
     {
-        if (state != BattleState.PLAYERTURN)
-            return;
+        if (state != BattleState.PLAYERTURN) return;
 
         StartCoroutine(PlayerHeal());
     }
