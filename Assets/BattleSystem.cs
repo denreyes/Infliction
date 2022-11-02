@@ -157,6 +157,7 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.LOST)
         {
             dialogueText.text = lostBattleMessages[Random.Range(0, lostBattleMessages.Length)];
+            StartCoroutine(gameOver());
         }
     }
 
@@ -183,6 +184,13 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         SceneManager.LoadScene("World");
+    }
+
+    IEnumerator gameOver()
+    {
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene("GameOver");
     }
 
     public void OnAttackButton()
