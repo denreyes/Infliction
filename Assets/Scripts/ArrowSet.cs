@@ -16,6 +16,8 @@ public class ArrowSet : MonoBehaviour
     void Start()
     {
         drawArrows();
+        resetArrows();
+        
     }
 
 
