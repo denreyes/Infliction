@@ -36,6 +36,33 @@ public class BattleSystem : MonoBehaviour
 
     public BattleState state;
 
+    // array of random successful attacks messages
+    private string[] successBattleMessages = new string[] {
+        "You hit the enemy!",
+        "You dealt damage to the enemy!",
+        "You did a good job!",
+        "The attack was successful!",
+        "The enemy is hurt!",
+    };
+
+    private string[] healBattleMessages = new string[] {
+        "You healed yourself!",
+        "You feel better!",
+        "You are now healthier!",
+    };
+
+    private string[] lostBattleMessages = new string[] {
+        "You lost the battle!",
+        "You are defeated!",
+        "You are no longer in the battle!",
+    };
+
+    private string[] wonBattleMessages = new string[] {
+        "You won the battle!",
+        "You are victorious!",
+        "You are the winner!",
+    };
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,8 +81,8 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text =
             "What to do you want to do" + " " + playerUnit.unitName + "?";
 
-        playerHUD.SetHUD (playerUnit);
-        enemyHUD.SetHUD (enemyUnit);
+        playerHUD.SetHUD(playerUnit);
+        enemyHUD.SetHUD(enemyUnit);
 
         yield return new WaitForSeconds(2f);
 
@@ -77,7 +104,7 @@ public class BattleSystem : MonoBehaviour
         }
 
         enemyHUD.SetHP(enemyUnit.currentHP);
-        dialogueText.text = "The attack is successful!";
+        dialogueText.text = successBattleMessages[Random.Range(0, successBattleMessages.Length)];
 
         yield return new WaitForSeconds(2f);
 
@@ -124,12 +151,13 @@ public class BattleSystem : MonoBehaviour
     {
         if (state == BattleState.WON)
         {
-            dialogueText.text = "You won the battle!";
+            dialogueText.text = wonBattleMessages[Random.Range(0, wonBattleMessages.Length)];
             StartCoroutine(backToWorld());
         }
         else if (state == BattleState.LOST)
         {
-            dialogueText.text = "You are Ass";
+            dialogueText.text = lostBattleMessages[Random.Range(0, lostBattleMessages.Length)];
+            StartCoroutine(gameOver());
         }
     }
 
@@ -143,7 +171,7 @@ public class BattleSystem : MonoBehaviour
         playerUnit.Heal(5);
 
         playerHUD.SetHP(playerUnit.currentHP);
-        dialogueText.text = "You feel like a king!";
+        dialogueText.text = healBattleMessages[Random.Range(0, healBattleMessages.Length)];
 
         yield return new WaitForSeconds(2f);
 
@@ -151,10 +179,18 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyTurn());
     }
 
-    IEnumerator backToWorld(){
+    IEnumerator backToWorld()
+    {
         yield return new WaitForSeconds(2f);
-        
+
         SceneManager.LoadScene("World");
+    }
+
+    IEnumerator gameOver()
+    {
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene("GameOver");
     }
 
     public void OnAttackButton()
