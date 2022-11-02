@@ -132,5 +132,6 @@ MonoBehaviour:
   unitName: Player
   unitLevel: 100
   damage: 10
+  skillDamage: 20
   maxHP: 100
   currentHP: 70
