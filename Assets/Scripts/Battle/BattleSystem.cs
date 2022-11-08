@@ -36,6 +36,8 @@ public class BattleSystem : MonoBehaviour
 
     public BattleState state;
 
+    public LevelLoader levelLoader;
+
     // array of random successful attacks messages
     private string[] successBattleMessages = new string[] {
         "You hit the enemy!",
@@ -184,6 +186,7 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         SceneManager.LoadScene("World");
+        //levelLoader.LoadLevel("world")
     }
 
     IEnumerator gameOver()

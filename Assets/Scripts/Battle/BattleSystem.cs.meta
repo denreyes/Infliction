@@ -3,7 +3,15 @@ guid: 643dea510a6271c4dba5914a411e7873
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerPrefab: {instanceID: 0}
+  - enemyPrefab: {instanceID: 0}
+  - playerBattleStation: {instanceID: 0}
+  - enemyBattleStation: {instanceID: 0}
+  - dialogueText: {instanceID: 0}
+  - playerHUD: {instanceID: 0}
+  - enemyHUD: {instanceID: 0}
+  - levelLoader: {fileID: 2090516412687128426, guid: 1db9dacb736576a4385ea34db42b2f1f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
