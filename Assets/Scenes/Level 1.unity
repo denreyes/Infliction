@@ -655,6 +655,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 3127912550889865475, guid: dd3de03d9d95bae48a6de58ab72dae8b, type: 3}
   playerBattleStation: {fileID: 1301728316}
   enemyBattleStation: {fileID: 1767766962}
+  skillBarPrefab: {fileID: 7508622560780460955, guid: 1debd76689f0041d8bbbcf97004791c4, type: 3}
   dialogueText: {fileID: 151771701}
   playerHUD: {fileID: 22686667}
   enemyHUD: {fileID: 273251019}
@@ -2661,7 +2662,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 277206727}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1290316449
 TilemapRenderer:
@@ -6260,7 +6261,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -6426,7 +6426,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 22686664}
     m_Modifications:
     - target: {fileID: 985014607519745007, guid: 9e9173f00f5f64643910fc4fa88e901a, type: 3}
@@ -6542,7 +6541,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9173f00f5f64643910fc4fa88e901a, type: 3}
 --- !u!224 &1755938568 stripped
 RectTransform:
@@ -8919,7 +8917,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 273251016}
     m_Modifications:
     - target: {fileID: 985014607519745007, guid: 9e9173f00f5f64643910fc4fa88e901a, type: 3}
@@ -9035,7 +9032,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9173f00f5f64643910fc4fa88e901a, type: 3}
 --- !u!224 &2014892036 stripped
 RectTransform:
@@ -9058,7 +9054,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6497560272841217362, guid: 1db9dacb736576a4385ea34db42b2f1f, type: 3}
@@ -9110,5 +9105,4 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 1db9dacb736576a4385ea34db42b2f1f, type: 3}

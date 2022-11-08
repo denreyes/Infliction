@@ -67,11 +67,13 @@ public class ArrowSet : MonoBehaviour
             if (arrows.Count < pos + 1)
             {
                 complete = true;
+                GameObject.Find("Battle System").GetComponent<BattleSystem>().SuccessSkillAttack();
+                Destroy(this.gameObject);
             }
         } else
         {
-            pos = 0;
-            resetArrows();
+            GameObject.Find("Battle System").GetComponent<BattleSystem>().FailSkillAttack();
+            Destroy(this.gameObject);
         }
     }
     private void drawArrows()

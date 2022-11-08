@@ -24,6 +24,8 @@ public class BattleSystem : MonoBehaviour
 
     public Transform enemyBattleStation;
 
+    public GameObject skillBarPrefab;
+
     Unit playerUnit;
 
     Unit enemyUnit;
@@ -37,6 +39,8 @@ public class BattleSystem : MonoBehaviour
     public BattleState state;
 
     public LevelLoader levelLoader;
+
+    private GameObject skillBar;
 
     // array of random successful attacks messages
     private string[] successBattleMessages = new string[] {
@@ -120,7 +124,6 @@ public class BattleSystem : MonoBehaviour
         else
         {
             //Enemy turn
-            state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
 
@@ -130,6 +133,8 @@ public class BattleSystem : MonoBehaviour
     IEnumerator EnemyTurn() // Enemy actions logic
 
     {
+        state = BattleState.ENEMYTURN;
+
         dialogueText.text = enemyUnit.unitName + " " + "atacks!";
         yield return new WaitForSeconds(1f);
 
@@ -177,7 +182,6 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
     }
 
@@ -186,7 +190,6 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         SceneManager.LoadScene("World");
-        //levelLoader.LoadLevel("world")
     }
 
     IEnumerator gameOver()
@@ -207,7 +210,18 @@ public class BattleSystem : MonoBehaviour
     {
         if (state != BattleState.PLAYERTURN) return;
 
+        skillBar = Instantiate(skillBarPrefab, playerBattleStation);
+        skillBar.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+        skillBar.transform.position = new Vector3(0.0f, 0.0f, 0f);
+    }
+
+    public void SuccessSkillAttack(){
         StartCoroutine(PlayerAttack("skill"));
+    }
+
+    public void FailSkillAttack(){
+        dialogueText.text = "You missed the enemy!";
+        StartCoroutine(EnemyTurn());
     }
 
     public void OnHealButton()

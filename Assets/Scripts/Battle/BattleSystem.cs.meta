@@ -8,6 +8,7 @@ MonoImporter:
   - enemyPrefab: {instanceID: 0}
   - playerBattleStation: {instanceID: 0}
   - enemyBattleStation: {instanceID: 0}
+  - skillBarPrefab: {fileID: 7508622560780460955, guid: 1debd76689f0041d8bbbcf97004791c4, type: 3}
   - dialogueText: {instanceID: 0}
   - playerHUD: {instanceID: 0}
   - enemyHUD: {instanceID: 0}
