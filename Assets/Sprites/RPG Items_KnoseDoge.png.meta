@@ -20,6 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -91,6 +93,66 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -20094,18 +20156,18 @@ TextureImporter:
       RPG Items_KnoseDoge_11: -1601300184
       RPG Items_KnoseDoge_234: 1703697115
       RPG Items_KnoseDoge_613: 278174654
-      RPG Items_KnoseDoge_154: -903897105
+      RPG Items_KnoseDoge_593: 1935564161
       RPG Items_KnoseDoge_51: 562490532
       RPG Items_KnoseDoge_812: -564243034
-      RPG Items_KnoseDoge_589: -2015975370
-      RPG Items_KnoseDoge_759: 46547820
+      RPG Items_KnoseDoge_920: -2128789946
+      RPG Items_KnoseDoge_899: -301082938
       RPG Items_KnoseDoge_79: -433078668
-      RPG Items_KnoseDoge_593: 1935564161
+      RPG Items_KnoseDoge_154: -903897105
       RPG Items_KnoseDoge_933: 262797103
       RPG Items_KnoseDoge_560: -2143104831
       RPG Items_KnoseDoge_699: -414090311
-      RPG Items_KnoseDoge_920: -2128789946
-      RPG Items_KnoseDoge_899: -301082938
+      RPG Items_KnoseDoge_589: -2015975370
+      RPG Items_KnoseDoge_759: 46547820
       RPG Items_KnoseDoge_171: 1475482887
       RPG Items_KnoseDoge_415: -1417439029
       RPG Items_KnoseDoge_749: -2071707004
@@ -20126,13 +20188,13 @@ TextureImporter:
       RPG Items_KnoseDoge_5: 455560679
       RPG Items_KnoseDoge_927: -1124696492
       RPG Items_KnoseDoge_133: -814385501
-      RPG Items_KnoseDoge_781: 1077960077
       RPG Items_KnoseDoge_846: -1343038773
       RPG Items_KnoseDoge_132: -1220108130
       RPG Items_KnoseDoge_732: -1511957707
       RPG Items_KnoseDoge_922: -271420702
       RPG Items_KnoseDoge_165: -31681457
       RPG Items_KnoseDoge_429: 854067238
+      RPG Items_KnoseDoge_781: 1077960077
       RPG Items_KnoseDoge_555: 1431470407
       RPG Items_KnoseDoge_8: 1012881634
       RPG Items_KnoseDoge_621: -1641885643
@@ -20225,9 +20287,9 @@ TextureImporter:
       RPG Items_KnoseDoge_723: 1971557454
       RPG Items_KnoseDoge_278: -1246252992
       RPG Items_KnoseDoge_705: 1674127573
-      RPG Items_KnoseDoge_791: -1222852615
-      RPG Items_KnoseDoge_622: 320829032
       RPG Items_KnoseDoge_850: -1659708700
+      RPG Items_KnoseDoge_622: 320829032
+      RPG Items_KnoseDoge_791: -1222852615
       RPG Items_KnoseDoge_177: 1554615238
       RPG Items_KnoseDoge_150: 1147674393
       RPG Items_KnoseDoge_49: 1833224659
@@ -20342,19 +20404,19 @@ TextureImporter:
       RPG Items_KnoseDoge_503: -496730892
       RPG Items_KnoseDoge_565: 1003703090
       RPG Items_KnoseDoge_587: 734878810
-      RPG Items_KnoseDoge_303: -598087956
+      RPG Items_KnoseDoge_940: -338189571
       RPG Items_KnoseDoge_348: -521771280
       RPG Items_KnoseDoge_872: -125765962
-      RPG Items_KnoseDoge_940: -338189571
+      RPG Items_KnoseDoge_303: -598087956
       RPG Items_KnoseDoge_677: 570060984
       RPG Items_KnoseDoge_501: 1951752566
       RPG Items_KnoseDoge_263: -289211431
       RPG Items_KnoseDoge_536: 2144464923
+      RPG Items_KnoseDoge_597: -1635889895
       RPG Items_KnoseDoge_59: -995779498
-      RPG Items_KnoseDoge_903: -230669267
       RPG Items_KnoseDoge_152: 262737671
       RPG Items_KnoseDoge_77: 1593193772
-      RPG Items_KnoseDoge_597: -1635889895
+      RPG Items_KnoseDoge_903: -230669267
       RPG Items_KnoseDoge_249: 842878428
       RPG Items_KnoseDoge_386: -599655992
       RPG Items_KnoseDoge_259: 1268800020
@@ -20599,8 +20661,8 @@ TextureImporter:
       RPG Items_KnoseDoge_67: 1263383385
       RPG Items_KnoseDoge_743: -1291880042
       RPG Items_KnoseDoge_70: 2067832682
-      RPG Items_KnoseDoge_6: 1482728989
       RPG Items_KnoseDoge_810: 902600109
+      RPG Items_KnoseDoge_6: 1482728989
       RPG Items_KnoseDoge_740: -1481336996
       RPG Items_KnoseDoge_124: -579382686
       RPG Items_KnoseDoge_624: 1327493028
@@ -20630,22 +20692,22 @@ TextureImporter:
       RPG Items_KnoseDoge_860: -1786091931
       RPG Items_KnoseDoge_803: -1435995583
       RPG Items_KnoseDoge_269: -682087379
-      RPG Items_KnoseDoge_424: 1297741311
       RPG Items_KnoseDoge_566: -1241756732
       RPG Items_KnoseDoge_353: 100907386
       RPG Items_KnoseDoge_430: 1446855332
       RPG Items_KnoseDoge_481: 1401703898
       RPG Items_KnoseDoge_777: 1430364267
-      RPG Items_KnoseDoge_835: -1918627564
+      RPG Items_KnoseDoge_424: 1297741311
       RPG Items_KnoseDoge_258: -1270493723
       RPG Items_KnoseDoge_871: -153346028
+      RPG Items_KnoseDoge_835: -1918627564
       RPG Items_KnoseDoge_656: -1146482260
       RPG Items_KnoseDoge_442: 233911968
       RPG Items_KnoseDoge_486: 285915669
-      RPG Items_KnoseDoge_219: 569950653
-      RPG Items_KnoseDoge_528: 1860840874
       RPG Items_KnoseDoge_617: -2030645867
+      RPG Items_KnoseDoge_219: 569950653
       RPG Items_KnoseDoge_272: 422264108
+      RPG Items_KnoseDoge_528: 1860840874
       RPG Items_KnoseDoge_687: 367462100
       RPG Items_KnoseDoge_572: -397521092
       RPG Items_KnoseDoge_291: -1576560653
@@ -20662,15 +20724,15 @@ TextureImporter:
       RPG Items_KnoseDoge_343: 256182482
       RPG Items_KnoseDoge_19: -6235161
       RPG Items_KnoseDoge_229: -662348964
+      RPG Items_KnoseDoge_483: -1375209477
       RPG Items_KnoseDoge_379: 682863637
       RPG Items_KnoseDoge_390: 1020259582
-      RPG Items_KnoseDoge_483: -1375209477
       RPG Items_KnoseDoge_299: -35261547
-      RPG Items_KnoseDoge_336: 1953499390
       RPG Items_KnoseDoge_66: 2099268086
       RPG Items_KnoseDoge_334: -886537399
       RPG Items_KnoseDoge_253: 729656122
       RPG Items_KnoseDoge_648: -1091785842
+      RPG Items_KnoseDoge_336: 1953499390
       RPG Items_KnoseDoge_138: -307619046
       RPG Items_KnoseDoge_227: 15779529
       RPG Items_KnoseDoge_456: 55472970
@@ -20696,9 +20758,9 @@ TextureImporter:
       RPG Items_KnoseDoge_610: -263257026
       RPG Items_KnoseDoge_143: -445661881
       RPG Items_KnoseDoge_23: 1990937164
-      RPG Items_KnoseDoge_305: 1964690562
-      RPG Items_KnoseDoge_240: 2057703379
       RPG Items_KnoseDoge_894: -374418968
+      RPG Items_KnoseDoge_240: 2057703379
+      RPG Items_KnoseDoge_305: 1964690562
       RPG Items_KnoseDoge_527: 270835542
       RPG Items_KnoseDoge_712: 1644935082
       RPG Items_KnoseDoge_807: -1583276453
@@ -20719,9 +20781,9 @@ TextureImporter:
       RPG Items_KnoseDoge_680: 993406976
       RPG Items_KnoseDoge_337: 1722543251
       RPG Items_KnoseDoge_460: -394462024
-      RPG Items_KnoseDoge_683: -730699834
-      RPG Items_KnoseDoge_15: 899115343
       RPG Items_KnoseDoge_861: 1507978024
+      RPG Items_KnoseDoge_15: 899115343
+      RPG Items_KnoseDoge_683: -730699834
       RPG Items_KnoseDoge_283: 1969800171
       RPG Items_KnoseDoge_598: 273510320
       RPG Items_KnoseDoge_311: -627763860
@@ -20733,12 +20795,12 @@ TextureImporter:
       RPG Items_KnoseDoge_584: -1688382211
       RPG Items_KnoseDoge_738: -765189022
       RPG Items_KnoseDoge_128: -2091321655
-      RPG Items_KnoseDoge_493: -291327302
       RPG Items_KnoseDoge_512: -276321767
       RPG Items_KnoseDoge_395: 579575349
       RPG Items_KnoseDoge_257: -618978204
       RPG Items_KnoseDoge_338: 650719511
       RPG Items_KnoseDoge_408: 908794699
+      RPG Items_KnoseDoge_493: -291327302
       RPG Items_KnoseDoge_845: -1690522525
       RPG Items_KnoseDoge_328: 1582026565
       RPG Items_KnoseDoge_546: -803515493
@@ -21017,7 +21079,6 @@ TextureImporter:
       RPG Items_KnoseDoge_238: 574069525
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
