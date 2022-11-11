@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -101,7 +102,8 @@ public class PlayerController : MonoBehaviour
             if (rnd <= 100)
             {
                 Debug.Log("Monster encounter");
-                levelLoader.LoadLevel("Battle");
+                //levelLoader.LoadLevel("Battle");
+                SceneManager.LoadScene("Level 1");
                 return true;
             }
             else

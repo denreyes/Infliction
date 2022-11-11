@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,19 +18,7 @@ public class LevelLoader : MonoBehaviour
         //    LoadNextLevel();
         //}
     }
-
-    public void LoadNextLevel()
-    {
-        int buildIndex = SceneManager.GetActiveScene().buildIndex;
-        if (buildIndex == 0)
-        {
-            buildIndex++;
-        } else if (buildIndex == 1)
-        {
-            buildIndex--;
-        }
-        StartCoroutine(LoadLevel(buildIndex));
-    }
+    
     public void LoadLevel(string level)
     {
         int buildIndex = 0;
