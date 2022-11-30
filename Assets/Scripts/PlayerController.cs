@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
             lastEncounterCheck = (int)Time.time;
             //Debug.Log(tempCtr++ + " - " + Time.time);
 
-            int rnd = UnityEngine.Random.Range(1, 1000);
+            int rnd = UnityEngine.Random.Range(1,1000);
             if (rnd <= 100)
             {
                 Debug.Log("Monster encounter");
