@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 182455400}
   - component: {fileID: 182455399}
   m_Layer: 0
-  m_Name: 'Battle System '
+  m_Name: Battle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6261,6 +6261,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -6426,6 +6427,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 22686664}
     m_Modifications:
     - target: {fileID: 985014607519745007, guid: 9e9173f00f5f64643910fc4fa88e901a, type: 3}
@@ -6541,6 +6543,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9173f00f5f64643910fc4fa88e901a, type: 3}
 --- !u!224 &1755938568 stripped
 RectTransform:
@@ -8917,6 +8920,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 273251016}
     m_Modifications:
     - target: {fileID: 985014607519745007, guid: 9e9173f00f5f64643910fc4fa88e901a, type: 3}
@@ -9032,6 +9036,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9173f00f5f64643910fc4fa88e901a, type: 3}
 --- !u!224 &2014892036 stripped
 RectTransform:
@@ -9054,6 +9059,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6497560272841217362, guid: 1db9dacb736576a4385ea34db42b2f1f, type: 3}
@@ -9105,4 +9111,5 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 1db9dacb736576a4385ea34db42b2f1f, type: 3}
