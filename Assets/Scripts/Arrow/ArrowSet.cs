@@ -8,12 +8,16 @@ public class ArrowSet : MonoBehaviour
     public Arrow prefab;
     public int amount = 5;
     private List<Arrow> arrows;
-
+    private AudioSource audioSource;
+    
     private int pos = 0;
     private bool complete = false;
 
+    private float stopTime = 0f; 
+        
     void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         drawArrows();
         resetArrows();
         
@@ -23,6 +27,11 @@ public class ArrowSet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (audioSource.time > stopTime && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        
         if (Input.GetKeyDown("space"))
         {
             pos = 0;
@@ -41,18 +50,22 @@ public class ArrowSet : MonoBehaviour
         if (Input.GetKeyDown("up"))
         {
             keyPressed = "up";
+            playAudio(0f, 0.3f);
         }
         else if (Input.GetKeyDown("down"))
         {
             keyPressed = "down";
+            playAudio(0.5f, 0.8f);
         }
         else if (Input.GetKeyDown("left"))
         {
             keyPressed = "left";
+            playAudio(0.95f, 1.2f);
         }
         else if (Input.GetKeyDown("right"))
         {
             keyPressed = "right";
+            playAudio(1.5f, 1.7f);
         }
         else
         {
@@ -74,6 +87,17 @@ public class ArrowSet : MonoBehaviour
             GameObject.Find("Battle System").GetComponent<BattleSystem>().FailSkillAttack();
             Destroy(this.gameObject);
         }
+    }
+    private void playAudio(float start, float end)
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        
+        audioSource.time = start;
+        audioSource.Play();
+        stopTime = end;
     }
     private void drawArrows()
     {
