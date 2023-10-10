@@ -49,6 +49,7 @@ public class BattleSystem : MonoBehaviour
         "You did a good job!",
         "The attack was successful!",
         "The enemy is hurt!",
+        "Matt is such a good friend!!!",
     };
 
     private string[] healBattleMessages = new string[] {
@@ -92,6 +93,7 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        
         state = BattleState.PLAYERTURN;
         PlayerTurn();
     }
@@ -134,6 +136,7 @@ public class BattleSystem : MonoBehaviour
 
     {
         state = BattleState.ENEMYTURN;
+        //Disable buttons
 
         dialogueText.text = enemyUnit.unitName + " " + "atacks!";
         yield return new WaitForSeconds(1f);
@@ -171,11 +174,12 @@ public class BattleSystem : MonoBehaviour
     void PlayerTurn()
     {
         dialogueText.text = "Choose an action";
+        //Enable buttons
     }
 
     IEnumerator PlayerHeal()
     {
-        playerUnit.Heal(5);
+        playerUnit.Heal(25);
 
         playerHUD.SetHP(playerUnit.currentHP);
         dialogueText.text = healBattleMessages[Random.Range(0, healBattleMessages.Length)];

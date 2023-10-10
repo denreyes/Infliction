@@ -47,7 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Dwyane
   unitLevel: 2
-  damage: 30
+  damage: 15
+  skillDamage: 0
   maxHP: 30
   currentHP: 30
 --- !u!1 &7158913824906369352
